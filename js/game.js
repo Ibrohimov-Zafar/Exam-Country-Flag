@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // DOM elements
-    let userName = sessionStorage.getItem('namePlayer') || 'Unknown Player';
+     let userName = sessionStorage.getItem('namePlayer') || 'Unknown Player';
     const quizContainer = document.getElementById('quiz-container');
     const nav = document.getElementById('nav');
     
-    // Update navigation with user info
-    nav.innerHTML = `
+     nav.innerHTML = `
     <nav class="navbar" id="navigation">
     <div id="userName">Xush kelibsiz, ${userName}</div>
     <div id="timer">Qolgan Vaqt: 15 daqiqa</div>
@@ -14,14 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const scoreElement = document.getElementById('score');
     const timerElement = document.getElementById('timer');
-    // Game state
-    let currentScore = 0;
+     let currentScore = 0;
     let totalRounds = 0;
     let questions = [];
     let interval;
 
-    // Settings from localStorage
-    const numQuestions = parseInt(localStorage.getItem('numQuestions')) || 10;
+     const numQuestions = parseInt(localStorage.getItem('numQuestions')) || 10;
     const difficulty = localStorage.getItem('difficulty') || 'easy';
 
     function startQuiz() {
@@ -134,15 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function endGame() {
         clearInterval(interval);
 
-        // Save score to localStorage
-        const highScores = JSON.parse(localStorage.getItem('highScores') || '{}');
+         const highScores = JSON.parse(localStorage.getItem('highScores') || '{}');
         if (!highScores[userName] || highScores[userName] < currentScore) {
             highScores[userName] = currentScore;
             localStorage.setItem('highScores', JSON.stringify(highScores));
         }
 
-        // Display end game message
-        const percentageScore = (currentScore / questions.length) * 100;
+         const percentageScore = (currentScore / questions.length) * 100;
         let message = '';
         if (percentageScore === 100) message = "Siz dahosiz! 😎";
         else if (percentageScore >= 80) message = "Yaxshi natija! 😇";
@@ -192,6 +186,5 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 `};
 
-    // Start the quiz when page loads
-    startQuiz();
+     startQuiz();
 });
