@@ -15,5 +15,5 @@ function saveSettings() {
    const difficulty = document.getElementById('difficulty').value;
    localStorage.setItem('numQuestions', numQuestions);
    localStorage.setItem('difficulty', difficulty);
-   window.location.href = 'game.html'; // Redirect to game page
+   window.location.href = 'game.html';  
 }
