@@ -197,8 +197,7 @@ tr:last-child td {
     border-bottom: none;
 }
 
-/* Animations */
-@keyframes fadeIn {
+ @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
@@ -207,8 +206,7 @@ tr:last-child td {
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         gap: 10px;
@@ -233,8 +231,7 @@ tr:last-child td {
     }
 }
 
-/* Progress Bar */
-.progress-bar {
+ .progress-bar {
     width: 100%;
     height: 8px;
     background: #e2e8f0;
@@ -249,8 +246,7 @@ tr:last-child td {
     transition: width 0.3s ease;
 }
 
-/* Celebration Animation */
-@keyframes celebrate {
+ @keyframes celebrate {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
@@ -340,8 +336,7 @@ tr:hover td {
     transform: scale(1.02);
 }
 
-/* Responsive design */
-@media (max-width: 480px) {
+ @media (max-width: 480px) {
     th, td {
         padding: 8px 10px;
         font-size: 14px;
