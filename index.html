@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Capitals Quiz Game</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="./js/script.js"defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Capitals Quiz Game</h1>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="namePlayer">Ismingizni kiriting</label>
+                <input type="text" id="namePlayer" name="namePlayer" placeholder="Ismingiz" required>
+            </div>
+            <button type="button" onclick="toggleSettings()">Davom etish</button>
+        </form>
+
+        <section id="settingsContainer" class="hidden">
+            <div class="input-group">
+                <label for="numQuestions">Savollar soni</label>
+                <select id="numQuestions" name="numQuestions">
+                    <option value="5">5 ta savol</option>
+                    <option value="10" selected>10 ta savol</option>
+                    <option value="15">15 ta savol</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="difficulty">Qiyinlik darajasi</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="easy">Oson</option>
+                    <option value="medium">O'rta</option>
+                    <option value="hard">Qiyin</option>
+                </select>
+            </div>
+            
+            <button type="button" onclick="saveSettings()">O'yinni boshlash</button>
+        </section>
+    </main>
+</body>
+</html>
